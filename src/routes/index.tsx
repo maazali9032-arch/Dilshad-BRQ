@@ -113,8 +113,19 @@ function ShowroomPage() {
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "bg-background/95 py-3 text-foreground shadow-[0_1px_0_var(--border)] backdrop-blur-xl" : "py-6 text-hero-foreground"}`}
       >
         <div className="mx-auto grid max-w-[1500px] grid-cols-[minmax(0,1fr)_auto] items-center px-5 md:px-10 lg:grid-cols-[1fr_auto_1fr]">
-          <a href="#home" className="min-w-0 font-display text-xl tracking-[0.08em] sm:text-2xl">
-            DILSHAD <span className="hidden sm:inline">BURQA HOUSE</span>
+          <a
+            href="#home"
+            className="flex min-w-0 items-center gap-2.5 font-display text-xl tracking-[0.08em] sm:text-2xl"
+          >
+            <img
+              src="/logo.webp"
+              alt=""
+              aria-hidden="true"
+              className="size-8 shrink-0 object-contain sm:hidden"
+            />
+            <span>
+              DILSHAD <span className="hidden sm:inline">BURQA HOUSE</span>
+            </span>
           </a>
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
             {navItems.map(([label, href]) => (
@@ -177,7 +188,6 @@ function ShowroomPage() {
                 <p className="font-display text-2xl md:text-4xl">
                   Modest Elegance, Beautifully Curated.
                 </p>
-                
               </div>
               <div className="flex animate-[hero-rise_.9s_.7s_both] flex-col gap-3 sm:flex-row">
                 <Button asChild variant="editorial-light" size="editorial">
